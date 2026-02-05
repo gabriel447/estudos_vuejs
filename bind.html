@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    body {
+      margin: 0;
+    }
+    .pinkBG {
+      background-color: lightpink;
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="app">
+    <div v-bind:class="vueClass"></div>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+    const app = Vue.createApp({
+      data() {
+        return {
+          vueClass: "pinkBG"
+        }
+      }
+    })
+    app.mount('#app')
+  </script>
+</body>
+</html>
